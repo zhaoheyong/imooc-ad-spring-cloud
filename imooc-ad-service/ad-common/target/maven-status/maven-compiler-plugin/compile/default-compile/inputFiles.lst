@@ -1,0 +1,14 @@
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/dump/table/AdCreativeTable.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/exception/AdException.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/advice/GlobalExceptionAdvice.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/advice/CommonResponseDataAdvice.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/conf/WebConfiguration.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/dump/table/AdUnitTable.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/dump/DConstant.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/dump/table/AdUnitDistrictTable.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/dump/table/AdUnitKeywordTable.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/dump/table/AdCreativeUnitTable.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/annotation/IgnoreResponseAdvice.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/vo/CommonResponse.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/dump/table/AdPlanTable.java
+/Users/zhaoheyong/eclipse-workspace/imooc-ad-spring-cloud/imooc-ad-service/ad-common/src/main/java/com/imooc/ad/dump/table/AdUnitItTable.java

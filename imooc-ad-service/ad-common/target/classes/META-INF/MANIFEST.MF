@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: ad-common
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: zhaoheyong
+Implementation-Vendor-Id: com.imooc.ad
+Build-Jdk: 1.8.0_161
+Implementation-URL: http://projects.spring.io/spring-boot/imooc-ad-spr
+ ing-cloud/imooc-ad-service/ad-common/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
