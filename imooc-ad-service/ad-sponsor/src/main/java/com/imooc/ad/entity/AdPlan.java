@@ -2,6 +2,8 @@ package com.imooc.ad.entity;
 
 import java.util.Date;
 
+import com.imooc.ad.constant.CommonStatus;
+
 public class AdPlan {
     private Long id;
 
@@ -9,7 +11,7 @@ public class AdPlan {
 
     private String planName;
 
-    private Byte planStatus;
+    private Integer planStatus;
 
     private Date startDate;
 
@@ -19,7 +21,7 @@ public class AdPlan {
 
     private Date updateTime;
 
-    public AdPlan(Long id, Long userId, String planName, Byte planStatus, Date startDate, Date endDate, Date createTime, Date updateTime) {
+    public AdPlan(Long id, Long userId, String planName, Integer planStatus, Date startDate, Date endDate, Date createTime, Date updateTime) {
         this.id = id;
         this.userId = userId;
         this.planName = planName;
@@ -28,6 +30,18 @@ public class AdPlan {
         this.endDate = endDate;
         this.createTime = createTime;
         this.updateTime = updateTime;
+    }
+    
+    public AdPlan(Long userId, String planName,
+            Date startDate, Date endDate) {
+
+	  this.userId = userId;
+	  this.planName = planName;
+	  this.planStatus = CommonStatus.VALID.getStatus();
+	  this.startDate = startDate;
+	  this.endDate = endDate;
+	  this.createTime = new Date();
+	  this.updateTime = this.createTime;
     }
 
     public AdPlan() {
@@ -58,12 +72,12 @@ public class AdPlan {
         this.planName = planName == null ? null : planName.trim();
     }
 
-    public Byte getPlanStatus() {
+    public Integer getPlanStatus() {
         return planStatus;
     }
 
-    public void setPlanStatus(Byte planStatus) {
-        this.planStatus = planStatus;
+    public void setPlanStatus(Integer integer) {
+        this.planStatus = integer;
     }
 
     public Date getStartDate() {
