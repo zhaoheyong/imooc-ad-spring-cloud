@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: ad-eureka
 Implementation-Version: 1.0-SNAPSHOT
-Built-By: zhaoheyong
+Built-By: hasee
 Implementation-Vendor-Id: com.imooc.ad
-Build-Jdk: 1.8.0_161
+Build-Jdk: 1.8.0_171
 Implementation-URL: http://projects.spring.io/spring-boot/imooc-ad-spr
  ing-cloud/ad-eureka/
 Created-By: Maven Integration for Eclipse
