@@ -30,14 +30,16 @@
       )
   </insert>
   
-  
-  <!-- 下面的可以删了 -->
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from ad_user
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{userId,jdbcType=BIGINT}
   </select>
+  
+  
+  <!-- 下面的可以删了 -->
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from ad_user
     where id = #{id,jdbcType=BIGINT}

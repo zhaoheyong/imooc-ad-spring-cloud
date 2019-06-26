@@ -31,11 +31,15 @@
     from ad_plan
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from ad_plan
-    where id = #{id,jdbcType=BIGINT}
-  </delete>
-  <insert id="insert" parameterType="com.imooc.ad.entity.AdPlan">
+  
+  <select id="findByUserIdAndPlanName"  resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ad_plan
+    where id = #{userId,jdbcType=BIGINT} and plan_name = #{planName,jdbcType=VARCHAR}
+  </select>
+  
+  <insert id="save" parameterType="com.imooc.ad.entity.AdPlan" keyProperty="id" useGeneratedKeys="true">
     insert into ad_plan (id, user_id, plan_name, 
       plan_status, start_date, end_date, 
       create_time, update_time)
@@ -43,6 +47,13 @@
       #{planStatus,jdbcType=TINYINT}, #{startDate,jdbcType=TIMESTAMP}, #{endDate,jdbcType=TIMESTAMP}, 
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
   </insert>
+  
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from ad_plan
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+
   <insert id="insertSelective" parameterType="com.imooc.ad.entity.AdPlan">
     insert into ad_plan
     <trim prefix="(" suffix=")" suffixOverrides=",">

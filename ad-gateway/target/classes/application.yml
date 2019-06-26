@@ -7,4 +7,12 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/
+      
+zuul:
+  prefix: imooc
+  routes:
+    sponsor:
+      path: /ad-sponsor/**
+      serviceId: eureka-client-ad-sponsor
+      strip-prefix: false
 

@@ -1,6 +1,5 @@
 package com.imooc.ad.dao;
 
-import java.util.Optional;
 
 import org.apache.ibatis.annotations.Mapper;
 
@@ -14,7 +13,7 @@ public interface AdUserMapper {
      * */
     AdUser findByUsername(String username);
 
-	Optional<AdUser> findById(Long userId);
+    AdUser findById(Long userId);
 	
 	int save(AdUser adUser);
 	
@@ -27,7 +26,6 @@ public interface AdUserMapper {
 
     int insertSelective(AdUser record);
 
-    AdUser selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(AdUser record);
 

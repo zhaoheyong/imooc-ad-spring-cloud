@@ -39,9 +39,9 @@ public class AdPlanServiceImpl implements IAdPlanService {
         }
 
         // 确保关联的 User 是存在的
-        Optional<AdUser> adUser =
+        AdUser adUser =
                 userRepository.findById(request.getUserId());
-        if (!adUser.isPresent()) {
+        if (null == adUser) {
             throw new AdException(Constants.ErrorMsg.CAN_NOT_FIND_RECORD);
         }
 
@@ -51,14 +51,15 @@ public class AdPlanServiceImpl implements IAdPlanService {
         if (oldPlan != null) {
             throw new AdException(Constants.ErrorMsg.SAME_NAME_PLAN_ERROR);
         }
-
-        AdPlan newAdPlan = planRepository.save(
-                new AdPlan(request.getUserId(), request.getPlanName(),
-                        CommonUtils.parseStringDate(request.getStartDate()),
-                        CommonUtils.parseStringDate(request.getEndDate())
-                )
+        AdPlan newAdPlan = new AdPlan(request.getUserId(), request.getPlanName(),
+                CommonUtils.parseStringDate(request.getStartDate()),
+                CommonUtils.parseStringDate(request.getEndDate())
         );
-
+        int count = planRepository.save(newAdPlan);
+        
+        if(count!=1){
+        	throw new AdException(Constants.ErrorMsg.INSERT_FAIL_ERROR);
+        }
         return new AdPlanResponse(newAdPlan.getId(),
                 newAdPlan.getPlanName());
 	}
@@ -103,7 +104,7 @@ public class AdPlanServiceImpl implements IAdPlanService {
         }
 
         plan.setUpdateTime(new Date());
-        plan = planRepository.save(plan);
+        int count = planRepository.save(plan);
 
         return new AdPlanResponse(plan.getId(), plan.getPlanName());
 	}

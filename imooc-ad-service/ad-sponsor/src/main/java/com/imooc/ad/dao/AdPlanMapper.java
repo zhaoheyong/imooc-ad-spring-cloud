@@ -11,7 +11,7 @@ import com.imooc.ad.entity.AdPlan;
 public interface AdPlanMapper {
     List<AdPlan> findAllByIdInAndUserId(@Param("ids")List<Long> ids,@Param("userId") Long userId);
     
-    AdPlan save(AdPlan plan);
+    int save(AdPlan plan);
 	
 	AdPlan findByIdAndUserId(Long id, Long userId);
 
